@@ -3,15 +3,17 @@ import { heroContent } from "../../data/hero.js";
 import { HiDownload } from "react-icons/hi";
 import { techTags } from "../../data/teach-tags.js";
 import DecayCard from "./DecayCard .jsx";
+import { useRef } from "react";
+import { playSound } from "../../libs/ClickSound.js";
 
 
 const HeroSection = () => {
 
-
+  const audioRef = useRef(null)
   return (
     <section id="home" className="min-h-[90vh] flex items-center  relative">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-8  ">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-4  ">
           {/* Text Content */}
           <div className="space-y-10 order-2 md:order-1 text-start ">
             <div className="relative">
@@ -59,8 +61,10 @@ const HeroSection = () => {
 
             <div className="cursor-pointer">
               <DecayCard width={200} height={300} image="./profile.jpg" >
-                <span className="hidden md:block text-gray-800">
-                  Namaste <br /> Lets Talk
+                <span className="hidden lg:block text-gray-800">
+                  <h1>
+                    Namaste <br /> Lets Talk
+                  </h1>
                 </span>
               </DecayCard>
             </div>

@@ -89,10 +89,13 @@ const audioRef = useRef(null);
         } fixed top-2 right-12 bg-white shadow-md`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <audio ref={audioRef} src="/sound/click.mp3" preload="auto" />
           {navItems.map((item) => (
+            
             <button
               key={item}
               onClick={() => {
+                playSound(audioRef)
                 setActiveItem(item);
                 setMobileMenuOpen(false);
               }}

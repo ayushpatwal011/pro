@@ -148,7 +148,7 @@ const DecayCard = ({
           />
         </g>
       </svg>
-      <div className="absolute bottom-[1.2em] left-[1em] tracking-[-0.5px] font-black text-[2.5rem] leading-[1.5em] first-line:text-[2.5rem] md:first-line:text-[6rem]">
+      <div className="absolute bottom-[0.5em] left-[0.5em] tracking-[-0.5px] font-black text-[2.5rem] leading-[1.5em] first-line:text-[6rem]">
         {children}
       </div>
     </div>
