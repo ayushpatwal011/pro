@@ -13,8 +13,12 @@ const Project = () => {
       playSound(audioRef);
     }
     setTimeout(() => {
-      navigate(link);
-    }, 200);
+    if (url.startsWith('http')) {
+      window.open(url, '_blank'); // Open external link in a new tab
+    } else {
+      navigate(url); // Internal routing
+    }
+  }, 200);
   };
 
   return (
