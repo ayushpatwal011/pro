@@ -3,13 +3,10 @@ import { heroContent } from "../../data/hero.js";
 import { HiDownload } from "react-icons/hi";
 import { techTags } from "../../data/teach-tags.js";
 import DecayCard from "./DecayCard .jsx";
-import { useRef } from "react";
-import { playSound } from "../../libs/ClickSound.js";
 
 
 const HeroSection = () => {
 
-  const audioRef = useRef(null)
   return (
     <section id="home" className="min-h-[90vh] flex items-center  relative md:mt-16">
       <div className="container mx-auto px-4">

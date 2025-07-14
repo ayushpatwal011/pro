@@ -4,12 +4,6 @@ import Squares from "./components/ui/Backendground";
 import HomePage from "./pages/HomePage";
 
 export default function App() {
-  const items = [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#" },
-    { label: "Contact", href: "#" },
-  ];
-
   return (
     <div className="min-h-screen bg-background/50 text-foreground transition-colors duration-300 relative">
       <Squares
