@@ -21,8 +21,8 @@ const Project = () => {
     } else {
       navigate(url); 
     }
-  }, 200);
-  };
+  }, 200)
+  }
 
   return (
     <section
