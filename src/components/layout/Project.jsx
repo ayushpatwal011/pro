@@ -1,33 +1,31 @@
 import React, { useRef } from 'react';
-import { projects } from '../../data/project'; // fixed typo
+import { projects } from '../../data/project';
 import { playSound } from '../../libs/ClickSound';
 import { useNavigate } from 'react-router-dom';
 import { HiLink, HiEye } from 'react-icons/hi';
 
 const Project = () => {
   const audioRef = useRef(null);
+  const navigate = useNavigate();
 
-  const handleClick = (link) => {
+  const handleClick = (url) => {
     if (audioRef.current) {
       playSound(audioRef);
     }
 
-    
-  setTimeout(() => {
-    window.open(link, "_blank"); 
     setTimeout(() => {
-    if (url.startsWith('http')) {
-      window.open(url, '_blank'); 
-    } else {
-      navigate(url); 
-    }
-  }, 200)
-  }
+      if (url.startsWith('http')) {
+        window.open(url, '_blank');
+      } else {
+        navigate(url);
+      }
+    }, 200);
+  };
 
   return (
     <section
       id="experience"
-      className=" py-8 md:px-10 flex flex-col items-center"
+      className="py-8 md:px-10 flex flex-col items-center"
     >
       <h2 className="text-3xl md:text-4xl font-bold mb-10 text-gray-800">
         Personal Works
@@ -44,7 +42,7 @@ const Project = () => {
             <img
               src={img}
               alt={title}
-              className="rounded-xl object-cover mb-3 w-full h-48 "
+              className="rounded-xl object-cover mb-3 w-full h-48"
             />
 
             <h3 className="text-xl font-semibold text-gray-700">{title}</h3>
