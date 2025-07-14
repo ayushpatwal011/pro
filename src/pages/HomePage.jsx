@@ -20,7 +20,7 @@ const HomePage = () => {
       <section id="skills" className='mt-8'>
         <TechnologiesScroller />
       </section>
-      <section id='Project'>
+      <section id='Projects'>
         <Project />
       </section>
       <section id='Experience'>
