@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   FaGithub,
   FaEnvelope,
@@ -7,14 +7,28 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { contact } from "../../data/contact";
+import { playSound } from "../../libs/ClickSound";
 
 const Contact = () => {
+  const audioRef = useRef(null);
+
+  const handleClick = (link) => {
+    if (audioRef.current) {
+      playSound(audioRef);
+    }
+    setTimeout(() => {
+      window.open(link, "_blank");
+    }, 200);
+  };
+
   return (
     <section className="py-10 md:px-10 bg-white shadow-xl">
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
         Contact Details
       </h2>
-      <p className="text-gray-600 mb-10 max-w-3xl text-start px-4">{contact.dis}</p>
+      <p className="text-gray-600 mb-10 max-w-3xl text-start px-4">
+        {contact.dis}
+      </p>
 
       <div className="grid md:grid-cols-2 gap-6">
         {/* Left Card */}
@@ -36,51 +50,42 @@ const Contact = () => {
 
         {/* Right Card */}
         <div className="bg-white md:shadow-md rounded-xl p-6 md:border">
+          <audio ref={audioRef} src="/sound/click.mp3" preload="auto" />
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-xl font-semibold text-gray-800">Friendly Links</h3>
+            <h3 className="text-xl font-semibold text-gray-800">Contact Links</h3>
           </div>
 
           <div className="border-t pt-4 flex gap-4 flex-wrap">
-            <a
-              href={contact.links.github}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => handleClick(contact.links.github)}
               className="p-3 bg-gray-100 rounded-md hover:bg-gray-200 text-2xl"
             >
               <FaGithub />
-            </a>
-            <a
-              href={`mailto:${contact.links.mail}`}
-              target="_blank"
-              rel="noopener noreferrer"
+            </button>
+            <button
+              onClick={() => handleClick(`mailto:${contact.links.mail}`)}
               className="p-3 bg-gray-100 rounded-md hover:bg-gray-200 text-2xl"
             >
               <FaEnvelope />
-            </a>
-            <a
-              href={contact.links.insta}
-              target="_blank"
-              rel="noopener noreferrer"
+            </button>
+            <button
+              onClick={() => handleClick(contact.links.insta)}
               className="p-3 bg-gray-100 rounded-md hover:bg-gray-200 text-2xl"
             >
               <FaInstagram />
-            </a>
-            <a
-              href={contact.links.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
+            </button>
+            <button
+              onClick={() => handleClick(contact.links.linkedin)}
               className="p-3 bg-gray-100 rounded-md hover:bg-gray-200 text-2xl"
             >
               <FaLinkedin />
-            </a>
-            <a
-              href={contact.links.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
+            </button>
+            <button
+              onClick={() => handleClick(contact.links.whatsapp)}
               className="p-3 bg-gray-100 rounded-md hover:bg-gray-200 text-2xl"
             >
               <FaWhatsapp />
-            </a>
+            </button>
           </div>
         </div>
       </div>

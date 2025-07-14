@@ -11,7 +11,7 @@ const HeroSection = () => {
 
   const audioRef = useRef(null)
   return (
-    <section id="home" className="min-h-[90vh] flex items-center  relative">
+    <section id="home" className="min-h-[90vh] flex items-center  relative md:mt-16">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-4  ">
           {/* Text Content */}
@@ -36,7 +36,7 @@ const HeroSection = () => {
             {/* Resume Button */}
             <div className="">
               <a
-                href="/profile.jpg"
+                href="/Ayushpatwal.pdf"
                 download
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gray-800 text-white text-sm font-medium hover:bg-gray-900 transition-colors duration-300"
               >

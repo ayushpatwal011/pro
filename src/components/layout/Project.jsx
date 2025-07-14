@@ -6,15 +6,15 @@ import { HiLink, HiEye } from 'react-icons/hi';
 
 const Project = () => {
   const audioRef = useRef(null);
-  const navigate = useNavigate();
 
   const handleClick = (link) => {
     if (audioRef.current) {
       playSound(audioRef);
     }
-    setTimeout(() => {
-      navigate(link);
-    }, 200);
+    
+  setTimeout(() => {
+    window.open(link, "_blank"); 
+  }, 200);
   };
 
   return (

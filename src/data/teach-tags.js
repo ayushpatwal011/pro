@@ -1,5 +1,7 @@
 export const techTags = [
-  'React',
-  'Java Script',
-  'Node js'
-]; 
+  '3rd Year Student',
+  'BGU College, Kotdwara',
+  'Full Stack Developer',
+  'Gen AI',
+  'Machine Learning Enthusiast'
+];

@@ -1,7 +1,7 @@
 export const experience = [
   {
     title: "Prodesk IT Internship",
-    dis: "Completed a 4-week online Backend Development internship, delivering 10 major projects and gaining hands-on experience in full-stack development.",
+    dis: "Completed a 4-week online Backend Development internship, delivering 8 major projects and gaining hands-on experience in full-stack development. (Checkout projects on Github)",
     img: "/prodesk.webp",
   },
   {

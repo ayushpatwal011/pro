@@ -5,6 +5,7 @@ import HeroSection from '../components/layout/HeroSection'
 import Experience from '../components/layout/Experience'
 import Project from '../components/layout/Project'
 import Contact from '../components/layout/Contact'
+import Skills from '../components/layout/Skills'
 
 
 const HomePage = () => {
@@ -13,21 +14,24 @@ const HomePage = () => {
         <div className="flex justify-center bg-black ">
         <Navbar />
       </div>
-      <div className='mt-8 '>
+      <secion id="Home" className='mt-8 '>
         <HeroSection />
-      </div>
-      <div className='mt-8'>
+      </secion>
+      <section id="skills" className='mt-8'>
         <TechnologiesScroller />
-      </div>
-      <div className=''>
+      </section>
+      <section id='Project'>
         <Project />
-      </div>
-      <div className=''>
+      </section>
+      <section id='Experience'>
         <Experience />
-      </div>
-      <div className=''>
+      </section>
+      <section id='Skills'>
+        <Skills />
+      </section>
+      <section id='Contact'>
         <Contact />
-      </div>
+      </section>
     </div>
   )
 }
