@@ -11,9 +11,18 @@ const Project = () => {
     if (audioRef.current) {
       playSound(audioRef);
     }
+<<<<<<< HEAD
     
   setTimeout(() => {
     window.open(link, "_blank"); 
+=======
+    setTimeout(() => {
+    if (url.startsWith('http')) {
+      window.open(url, '_blank'); // Open external link in a new tab
+    } else {
+      navigate(url); // Internal routing
+    }
+>>>>>>> e488add2fab22d7b6fe777bb6aab322ca5f42e71
   }, 200);
   };
 
