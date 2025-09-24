@@ -38,7 +38,7 @@ const HeroSection = () => {
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gray-800 text-white text-sm font-medium hover:bg-gray-900 transition-colors duration-300"
               >
                 <HiDownload className="w-5 h-5" />
-                Download Resume
+                Download Demo Resume
               </a>
             </div>
             <div className="flex flex-wrap gap-3 pt-2 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
